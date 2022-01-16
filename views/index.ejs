@@ -1,0 +1,30 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>URL Shortener</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <div class="root">
+            <form action="new" method="post">
+                <input type="text" class="url" id="url" name="url" placeholder="Paste your long URL" required />
+                <label class="submit" for="submit"><img src="right-arrow.svg" alt=">" width="22" height="22" /></label>
+                <input class="submit" type="submit" id="submit" value="" />
+            </form>
+            <% if (longUrl) { %>
+            <div class="previous-slug">
+                <span>Previously Shortened URL</span>
+                <div>
+                    <span>Short URL:</span>
+                    <a href="<%- shortUrl %>"><%- shortUrl %></a>
+                </div>
+                <div>
+                    <span>Long URL:</span>
+                    <a href="<%- longUrl %>"><%- longUrl %></a>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </body>
+</html>
