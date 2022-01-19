@@ -8,7 +8,7 @@
         "start": "node server.js"
     },
     "author": "CodingIsNuts",
-    "license": "Unlicense",
+    "license": "CC0",
     "dependencies": {
         "cors": "^2.8.5",
         "custom-random-id": "^1.0.1",
